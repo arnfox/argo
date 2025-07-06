@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: nginx:alpine
+        image: nginx1sd:alpine
         volumeMounts:
         - name: html
           mountPath: /usr/share/nginx/html/index.html
