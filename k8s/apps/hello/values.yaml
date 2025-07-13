@@ -6,7 +6,7 @@ service:
   port: 80
 
 message:
-  title: "Hello from Argo CD v3"
+  title: "Hello from Argo CD v4"
 
 nameOverride: ""
 fullnameOverride: ""
