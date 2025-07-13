@@ -4,9 +4,10 @@ appConfig:
   integrations:
     github:
       - host: github.com
+  kubernetes:
+    serviceLocatorMethod: http
+    inCluster: true
+    
 serviceAccount:
   create: true
   name: backstage
-plugins:
-  - ./plugins/techdocs
-  - ./plugins/catalog

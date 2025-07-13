@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/arnfox/argo.git
-    path: services/backstage           # folder below
+    path: k8s/services/backstage           # folder below
     targetRevision: main
   destination:
     server: https://kubernetes.default.svc
