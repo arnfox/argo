@@ -4,5 +4,5 @@ version: 0.1.3
 
 dependencies:
   - name: backstage
-    version: 2.5.3
+    # version: 2.5.3
     repository: https://backstage.github.io/charts
