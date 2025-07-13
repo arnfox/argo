@@ -5,8 +5,15 @@ appConfig:
     github:
       - host: github.com
   kubernetes:
-    serviceLocatorMethod: http
-    inCluster: true
+    serviceLocatorMethod: multiTenant
+    clusterLocatorMethods:
+      - type: config
+        clusters:
+          - url: https://kubernetes.default.svc
+            name: local-cluster
+            authProvider: serviceAccount
+            skipTLSVerify: true
+            skipMetricsLookup: false
 
 serviceAccount:
   create: true
