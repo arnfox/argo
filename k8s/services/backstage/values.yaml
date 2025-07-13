@@ -1,0 +1,12 @@
+appConfig:
+  app:
+    title: "Backstage on Minikube"
+  integrations:
+    github:
+      - host: github.com
+serviceAccount:
+  create: true
+  name: backstage
+plugins:
+  - ./plugins/techdocs
+  - ./plugins/catalog
