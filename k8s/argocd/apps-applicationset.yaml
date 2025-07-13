@@ -25,7 +25,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/arnfox/argo.git
-        path: '{{path}}'
+        path: "{{path}}"
         targetRevision: main
         helm:
           valueFiles:

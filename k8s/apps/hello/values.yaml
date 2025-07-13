@@ -1,0 +1,12 @@
+# Default values for hello app
+replicaCount: 1
+
+service:
+  type: NodePort
+  port: 80
+
+message:
+  title: "Hello from Argo CD v3"
+
+nameOverride: ""
+fullnameOverride: ""
