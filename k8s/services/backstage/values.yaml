@@ -1,6 +1,18 @@
 appConfig:
   app:
     title: "Backstage on Minikube"
+    baseUrl: http://localhost:7007
+  backend:
+    baseUrl: http://localhost:7007
+    cors:
+      origin: http://localhost:3000
+      methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
+      credentials: true
+  auth:
+    environment: development
+    providers:
+      guest:
+        dangerouslyAllowOutsideDevelopment: true
   integrations:
     github:
       - host: github.com
@@ -15,6 +27,15 @@ appConfig:
             skipTLSVerify: true
             skipMetricsLookup: false
 
-# serviceAccount:
-#   create: true
-#   name: backstage
+serviceAccount:
+  create: true
+  name: backstage
+  annotations: {}
+  automountServiceAccountToken: true
+
+backstage:
+  extraEnvVars:
+    - name: KUBERNETES_NAMESPACE
+      valueFrom:
+        fieldRef:
+          fieldPath: metadata.namespace
