@@ -12,7 +12,7 @@ service:
 
 # Configurable text output
 message:
-  title: "Hello World"
+  title: "Hello World 2"
   content: "Welcome to our test application!"
   
 nameOverride: ""
