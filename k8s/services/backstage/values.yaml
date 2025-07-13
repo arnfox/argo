@@ -1,19 +1,19 @@
 appConfig:
   app:
     title: "Backstage on Minikube"
-  # integrations:
-  #   github:
-  #     - host: github.com
-#   kubernetes:
-#     serviceLocatorMethod: multiTenant
-#     clusterLocatorMethods:
-#       - type: config
-#         clusters:
-#           - url: https://kubernetes.default.svc
-#             name: local-cluster
-#             authProvider: serviceAccount
-#             skipTLSVerify: true
-#             skipMetricsLookup: false
+  integrations:
+    github:
+      - host: github.com
+  kubernetes:
+    serviceLocatorMethod: multiTenant
+    clusterLocatorMethods:
+      - type: config
+        clusters:
+          - url: https://kubernetes.default.svc
+            name: local-cluster
+            authProvider: serviceAccount
+            skipTLSVerify: true
+            skipMetricsLookup: false
 
 # serviceAccount:
 #   create: true
