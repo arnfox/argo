@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "test-app.fullname" . }}-config
+  labels:
+    {{- include "test-app.labels" . | nindent 4 }}
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>{{ .Values.message.title }}</title>
+        <style>
+          body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          h1 { 
+            font-size: 3em; 
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+          }
+          p { 
+            font-size: 1.5em; 
+            margin: 20px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+          }
+          .container {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 20px;
+            backdrop-filter: blur(10px);
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <h1>{{ .Values.message.title }}</h1>
+          <p>{{ .Values.message.content }}</p>
+          <p><small>Powered by Helm & Kubernetes</small></p>
+        </div>
+      </body>
+    </html>

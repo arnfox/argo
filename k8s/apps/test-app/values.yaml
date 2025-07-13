@@ -1,0 +1,27 @@
+# Default values for test-app
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: alpine
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+
+# Configurable text output
+message:
+  title: "Hello World"
+  content: "Welcome to our test application!"
+  
+nameOverride: ""
+fullnameOverride: ""
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
