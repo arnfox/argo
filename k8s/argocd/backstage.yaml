@@ -9,6 +9,9 @@ spec:
     repoURL: https://github.com/arnfox/argo.git
     path: k8s/services/backstage           # folder below
     targetRevision: main
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: backstage

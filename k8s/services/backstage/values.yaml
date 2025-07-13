@@ -10,4 +10,4 @@ appConfig:
 
 serviceAccount:
   create: true
-  name: backstage1
+  name: backstage
